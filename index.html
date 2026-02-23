@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grandmaster Chess | Premium Experience</title>
+  <title>CHESS BATTLEGROUND | Warriors of the Board</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap"
     rel="stylesheet">
 </head>
 
@@ -18,8 +18,8 @@
   <div id="app">
     <div class="main-container">
       <header>
-        <h1>GRANDMASTER<span>CHESS</span></h1>
-        <p class="subtitle">Experience the ultimate battle of minds</p>
+        <h1>BATTLE<span>GROUND</span></h1>
+        <p class="subtitle">Command your legion. Conquer the realm.</p>
       </header>
 
       <div class="game-layout">
@@ -62,8 +62,39 @@
         </main>
 
         <aside class="sidebar-right">
+          <div class="glass-card skills-panel">
+            <h3>Battle Skills</h3>
+            <div class="skills-grid">
+              <button class="skill-btn" id="skill-breeze" title="Push piece back 1 tile">
+                <span class="skill-icon">🍃</span>
+                <span class="skill-label">Breeze</span>
+                <div class="inventory-count" id="count-breeze">0</div>
+              </button>
+              <button class="skill-btn" id="skill-freeze" title="Skip opponent turn">
+                <span class="skill-icon">❄️</span>
+                <span class="skill-label">Freeze</span>
+                <div class="inventory-count" id="count-freeze">0</div>
+              </button>
+              <button class="skill-btn" id="skill-blink" title="Pass through blocking pawn">
+                <span class="skill-icon">🌀</span>
+                <span class="skill-label">Blink</span>
+                <div class="inventory-count" id="count-blink">0</div>
+              </button>
+              <button class="skill-btn" id="skill-shield" title="Block Breeze/Freeze">
+                <span class="skill-icon">🛡️</span>
+                <span class="skill-label">Shield</span>
+                <div class="inventory-count" id="count-shield">0</div>
+              </button>
+              <button class="skill-btn" id="skill-rage" title="Pawn move 2 steps again">
+                <span class="skill-icon">🔥</span>
+                <span class="skill-label">Rage</span>
+                <div class="inventory-count" id="count-rage">0</div>
+              </button>
+            </div>
+          </div>
+
           <div class="glass-card move-history">
-            <h3>Move History</h3>
+            <h3>Battle Log</h3>
             <div id="move-list" class="move-list">
               <!-- Moves will be appended here -->
             </div>
