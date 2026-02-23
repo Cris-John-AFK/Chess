@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grandmaster Chess | Premium Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div class="main-container">
+        <header>
+          <h1>GRANDMASTER<span>CHESS</span></h1>
+          <p class="subtitle">Experience the ultimate battle of minds</p>
+        </header>
+
+        <div class="game-layout">
+          <aside class="sidebar-left">
+            <div class="glass-card game-info">
+              <h3>Game Status</h3>
+              <div id="status" class="status-msg">White to move</div>
+              <div class="turn-indicator">
+                <div id="turn-dot" class="dot white"></div>
+                <span id="turn-text">White's Turn</span>
+              </div>
+            </div>
+
+            <div class="glass-card controls">
+              <h3>Match Settings</h3>
+              
+              <div class="control-group">
+                <label>Game Mode</label>
+                <div class="toggle-group">
+                  <button id="mode-pve" class="active">Vs AI</button>
+                  <button id="mode-pvp">PvP</button>
+                </div>
+              </div>
+
+              <div id="ai-settings" class="control-group">
+                <label>AI Strength (Level <span id="lvl-val">1</span>)</label>
+                <input type="range" id="ai-level" min="1" max="5" value="1" step="1">
+                <div class="lvl-labels">
+                  <span>Novice</span>
+                  <span>Master</span>
+                </div>
+              </div>
+
+              <button id="reset-btn" class="primary-btn">New Game</button>
+            </div>
+          </aside>
+
+          <main class="board-container">
+            <div id="board" class="chess-board"></div>
+          </main>
+
+          <aside class="sidebar-right">
+            <div class="glass-card move-history">
+              <h3>Move History</h3>
+              <div id="move-list" class="move-list">
+                <!-- Moves will be appended here -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
